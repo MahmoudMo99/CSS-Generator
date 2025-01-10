@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form" id="signupForm">
+            <h2>Join CSS Generator.</h2>
+            <ul class="tabs">
+                <li><a href="login.html">Login</a></li>
+                <li class="active">Register</li>
+            </ul>
+            <input type="email" id="signupEmail" placeholder="Email Address" required>
+
+            <div class="password-field">
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <i id="togglePassword1" class="fas fa-eye-slash"
+                    onclick="togglePass('togglePassword1', 'signupPassword')"></i>
+            </div>
+
+            <div class="password-field">
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm password" required>
+                <i id="togglePassword2" class="fas fa-eye-slash"
+                    onclick="togglePass('togglePassword2', 'signupConfirmPassword')"></i>
+            </div>
+
+            <button onclick="signup()">Register</button>
+            <p class="not-member">Already have an Account? <a href="login.html">Login</a></p>
+
+            <p class="error" id="signupError"></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

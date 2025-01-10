@@ -1,3 +1,10 @@
+const sidebar = document.querySelector(".sidebar");
+const toggleButton = document.querySelector(".toggle-sidebar");
+
+toggleButton.addEventListener("click", () => {
+  sidebar.classList.toggle("collapsed");
+});
+
 const horizontalOffsetInput = document.getElementById("horizontal-offset");
 const verticalOffsetInput = document.getElementById("vertical-offset");
 const blurRadiusInput = document.getElementById("blur-radius");

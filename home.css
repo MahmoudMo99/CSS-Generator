@@ -54,7 +54,6 @@ body {
 
 .header-actions .login-btn {
   background-color: #eee;
-  color: #333;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -65,6 +64,11 @@ body {
 
 .header-actions .login-btn:hover {
   background-color: white;
+}
+
+.login-btn a {
+  text-decoration: none;
+  color: darkblue;
 }
 
 .slider {

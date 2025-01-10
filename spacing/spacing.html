@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing</title>
+    <link rel="stylesheet" href="./spacing.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1><a href="../home.html">CSS</a></h1>
+        <input type="search" placeholder="Search...">
+        <div class="header-actions">
+            <button class="login-btn"><a href="../login/login.html">Login</a></button>
+        </div>
+    </header>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><a href="../fonts/fonts.html"> <i class="fas fa-font"></i><span>Fonts</span></a></li>
+                <li><a href="../boxShadow/box-shadow.html" data-page="box-shadow"><i class="fas fa-square"></i><span>Box
+                            Shadow</span></a></li>
+                <li><a href="../border/border.html" data-page="borders"><i
+                            class="fas fa-border-style"></i><span>Borders</span></a></li>
+                <li><a href="../texts/texts.html" data-page="borders"><i
+                            class="fa-solid fa-t"></i><span>Texts</span></a>
+                </li>
+                <li><a href="../buttons/buttons.html"><i class="fa-solid fa-play"></i><span>Buttons</span></a></li>
+                <li><a href="../images/image.html"><i class="fa-regular fa-image"></i><span>Image</span></a></li>
+                <li><a href="../lists/list.html"><i class="fas fa-list"></i><span>Lists</span></a>
+                </li>
+                <li><a href="../spacing/spacing.html" class="active"><i
+                            class="fa-solid fa-circle-notch"></i><span>Spacing</span></a>
+                </li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h2>Spacing Customization</h2>
+            <div class="controls-container">
+                <div class="controls">
+                    <div class="control-panel">
+
+                        <section>
+                            <label for="unit-select">Unit:</label>
+                            <select id="unit-select">
+                                <option value="px">Pixels (px)</option>
+                                <option value="rem">Rems (rem)</option>
+                                <option value="em">Ems (em)</option>
+                            </select>
+                        </section>
+
+                        <section class="padding-inputs">
+                            <div class="row">
+                                <div>
+                                    <label for="padding-top">Padding Top:</label>
+                                    <input type="number" id="padding-top" value="0" min="0">
+                                </div>
+                                <div>
+                                    <label for="padding-right">Padding Right:</label>
+                                    <input type="number" id="padding-right" value="0" min="0">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label for="padding-bottom">Padding Bottom:</label>
+                                    <input type="number" id="padding-bottom" value="0" min="0">
+                                </div>
+                                <div>
+                                    <label for="padding-left">Padding Left:</label>
+                                    <input type="number" id="padding-left" value="0" min="0">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label for="margin-top">Margin Top:</label>
+                                    <input type="number" id="margin-top" value="0" min="0">
+                                </div>
+                                <div>
+                                    <label for="margin-right">Margin Right:</label>
+                                    <input type="number" id="margin-right" value="0" min="0">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label for="margin-bottom">Margin Bottom:</label>
+                                    <input type="number" id="margin-bottom" value="0" min="0">
+                                </div>
+                                <div>
+                                    <label for="margin-left">Margin Left:</label>
+                                    <input type="number" id="margin-left" value="0" min="0">
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="output">
+                    <h3>Preview</h3>
+                    <div class="preview-box">
+                        <div id="outer-div">
+                            <div id="container">
+                                <div id="content">
+                                    This is a content div<br>Pink is padding<br>Blue is margin
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <h3 class="code-title">HTML Code</h3>
+                <pre><code id="html-code"></code></pre>
+                <button class="copy-btn" id="copy-html">Copy</button>
+                <h3 class="code-title">CSS Code</h3>
+                <pre><code id="css-code"></code></pre>
+                <button class="copy-btn" id="copy-css">Copy</button>
+            </div>
+
+
+        </main>
+    </div>
+    <script src="spacing.js"></script>
+</body>
+
+</html>

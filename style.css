@@ -19,6 +19,9 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .main-header h1 a {
@@ -54,7 +57,6 @@ body {
 
 .header-actions .login-btn {
   background-color: #eee;
-  color: #333;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -67,9 +69,13 @@ body {
   background-color: white;
 }
 
+.login-btn a {
+  text-decoration: none;
+  color: darkblue;
+}
+
 .main-layout {
   display: flex;
-  height: 100%;
 }
 
 .sidebar {
@@ -78,6 +84,10 @@ body {
   padding: 20px 10px;
   transition: width 0.3s ease;
   overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 999;
 }
 
 .sidebar ul {
@@ -101,6 +111,11 @@ body {
 }
 
 .sidebar a:hover {
+  background-color: #2952be;
+  color: white;
+}
+
+.sidebar a.active {
   background-color: #2952be;
   color: white;
 }

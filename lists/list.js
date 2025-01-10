@@ -1,3 +1,10 @@
+const sidebar = document.querySelector(".sidebar");
+const toggleButton = document.querySelector(".toggle-sidebar");
+
+toggleButton.addEventListener("click", () => {
+  sidebar.classList.toggle("collapsed");
+});
+
 const listStyleSelect = document.getElementById("list-style");
 const listStylePositionSelect = document.getElementById("list-style-position");
 const sampleList = document.getElementById("sample-list");

@@ -1,3 +1,10 @@
+const sidebar = document.querySelector(".sidebar");
+const toggleButton = document.querySelector(".toggle-sidebar");
+
+toggleButton.addEventListener("click", () => {
+  sidebar.classList.toggle("collapsed");
+});
+
 const borderWidthInput = document.getElementById("border-width");
 const borderStyleInput = document.getElementById("border-style");
 const borderColorInput = document.getElementById("border-color");

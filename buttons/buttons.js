@@ -1,3 +1,10 @@
+const sidebar = document.querySelector(".sidebar");
+const toggleButton = document.querySelector(".toggle-sidebar");
+
+toggleButton.addEventListener("click", () => {
+  sidebar.classList.toggle("collapsed");
+});
+
 const buttonPaddingInput = document.getElementById("button-padding");
 const buttonMarginInput = document.getElementById("button-margin");
 const buttonWidthInput = document.getElementById("button-width");
