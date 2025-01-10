@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Customizer</title>
+    <link rel="stylesheet" href="./buttons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>CSS Generator</h1>
+        <input type="search" placeholder="Search...">
+        <div class="header-actions">
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><a href="fonts.html"><i class="fas fa-font"></i><span>Fonts</span></a></li>
+                <li><a href="buttons.html"><i class="fas fa-font"></i><span>Buttons</span></a></li>
+
+                <li><a href="#" data-page="box-shadow"><i class="fas fa-square"></i><span>Box Shadow</span></a></li>
+                <li><a href="#" data-page="borders"><i class="fas fa-border-style"></i><span>Borders</span></a></li>
+            </ul>
+        </aside>
+        <!-- ////////////////////////////////////////////////////////////////////////////// -->
+        <main class="content">
+            <h2>Button Customization</h2>
+            <div class="controls-container">
+                <div class="controls">
+                    <label for="button-text">Text: <span id="text-value"></span></label>
+                    <input type="text" id="button-text" value="Sample Button" />
+                    <label for="button-padding">Padding: <span id="padding-value">0</span>px</label>
+                    <input type="range" id="button-padding" min="0" max="50" value="0" />
+
+                    <label for="button-margin">Margin: <span id="margin-value">0</span>px</label>
+                    <input type="range" id="button-margin" min="0" max="50" value="0" />
+
+                    <label for="button-width">Width: <span id="width-value">100</span>px</label>
+                    <input type="range" id="button-width" min="50" max="500" value="100" />
+
+                    <label for="button-height">Height: <span id="height-value">50</span>px</label>
+                    <input type="range" id="button-height" min="20" max="200" value="50" />
+
+                    <label for="button-border-radius">Border Radius: <span id="border-radius-value">0</span>px</label>
+                    <input type="range" id="button-border-radius" min="0" max="50" value="0" />
+
+
+                    <label for="button-color">Text Color:</label>
+                    <input type="color" id="button-color" value="#ffffff" value="rgb(255, 255, 255)" />
+
+                    <label for="button-bg-color">Background Color:</label>
+                    <input type="color" id="button-bg-color" value="#0c0791" />
+
+                    <label for="button-border">Border:</label>
+                    <input type="text" id="button-border" placeholder="ex, 2px solid #000" />
+
+                    <label for="button-shadow">Box Shadow:</label>
+                    <input type="text" id="button-shadow" placeholder="ex, 2px 2px 5px rgba(0,0,0,0.5)" />
+                </div>
+                <div class="output">
+                    <h3>Preview</h3>
+                    <div class="preview-box">
+                        <button id="sample-button">Sample Button</button>
+                    </div>
+                </div>
+            </div>
+            <div class="code-container">
+                <h3 class="code-title">HTML Code</h3>
+                <pre><code id="html-code"></code></pre>
+                <button class="copy-btn" id="copy-html">Copy</button>
+                <h3 class="code-title">CSS Code</h3>
+                <pre><code id="css-code"></code></pre>
+                <button class="copy-btn" id="copy-css">Copy</button>
+            </div>
+        </main>
+    </div>
+    <script src="buttons.js"></script>
+</body>
+
+</html>

@@ -8,17 +8,19 @@ toggleButton.addEventListener("click", () => {
 const fontFamilySelect = document.getElementById("font-family");
 const fontSizeInput = document.getElementById("font-size");
 const fontWeightSelect = document.getElementById("font-weight");
+const fontStyleSelect = document.getElementById("font-style");
+
 const sampleText = document.getElementById("sample-text");
 const htmlCode = document.getElementById("html-code");
 const cssCode = document.getElementById("css-code");
 const currentFontSize = document.getElementById("current-font-size");
-
 const copyHtmlButton = document.getElementById("copy-html");
 const copyCssButton = document.getElementById("copy-css");
 
 fontFamilySelect.addEventListener("change", updatePreview);
 fontSizeInput.addEventListener("input", updatePreview);
 fontWeightSelect.addEventListener("change", updatePreview);
+fontStyleSelect.addEventListener("change", updatePreview);
 
 fontSizeInput.addEventListener("input", function () {
   currentFontSize.textContent = fontSizeInput.value;
@@ -47,10 +49,12 @@ function updatePreview() {
   const fontFamily = fontFamilySelect.value;
   const fontSize = fontSizeInput.value;
   const fontWeight = fontWeightSelect.value;
+  const fontStyle = fontStyleSelect.value;
 
   sampleText.style.fontFamily = fontFamily;
   sampleText.style.fontSize = `${fontSize}px`;
   sampleText.style.fontWeight = fontWeight;
+  sampleText.style.fontStyle = fontStyle;
 
   htmlCode.textContent = `
 <div id="sample-text" class="preview-box">
@@ -62,6 +66,7 @@ function updatePreview() {
     font-family: ${fontFamily};
     font-size: ${fontSize}px;
     font-weight: ${fontWeight};
+    font-style: ${fontStyle};
 }`;
 }
 

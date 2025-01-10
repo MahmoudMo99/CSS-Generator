@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Customizer</title>
-    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./image.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -25,48 +25,41 @@
                 <li><a href="fonts.html"><i class="fas fa-font"></i><span>Fonts</span></a></li>
                 <li><a href="#" data-page="box-shadow"><i class="fas fa-square"></i><span>Box Shadow</span></a></li>
                 <li><a href="#" data-page="borders"><i class="fas fa-border-style"></i><span>Borders</span></a></li>
+                <li><a href="../texts/texts.html" data-page="borders"><i
+                            class="fa-solid fa-t"></i><span>Texts</span></a></li>
             </ul>
         </aside>
         <main class="content">
-            <h2>Font Customization</h2>
+            <h2>Image Filters</h2>
             <div class="controls-container">
                 <div class="controls">
-                    <label for="font-family"> Font Family:</label>
-                    <select id="font-family">
-                        <option value="Arial">Arial</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Courier New">Courier New</option>
-                    </select>
-                    <label for="font-size">Font Size: <span id="current-font-size">16</span>px</label>
-                    <input type="range" id="font-size" value="16" min="8" max="72" />
-                    <label for="font-weight"> Font Weight:</label>
-                    <select id="font-weight">
-                        <option value="100">100</option>
-                        <option value="200">200</option>
-                        <option value="300">300</option>
-                        <option value="400">400</option>
-                        <option value="500">500</option>
-                        <option value="600">600</option>
-                        <option value="700">700</option>
-                        <option value="800">800</option>
-                        <option value="900">900</option>
-                    </select>
-                    <label for="font-style"> Font Style:</label>
-                    <select id="font-style">
-                        <option value="normal">normal</option>
-                        <option value="italic">italic</option>
-                        <option value="oblique">oblique</option>
-                    </select>
+                    <label for="gray-scale">Gyarscale <span id="current-scale">0</span>%</label>
+                    <input type="range" id="gray-scale" value="0" min="0" max="100" />
+
+                    <label for="blur-input">Blur <span id="current-blur">0</span>px</label>
+                    <input type="range" id="blur-input" value="0" min="0" max="10" />
+
+                    <label for="brightness">Brightness <span id="current-bright">100</span>%</label>
+                    <input type="range" id="brightness" value="100" min="0" max="200" />
+
+                    <label for="contrast">Contrast <span id="current-constrast">100</span>%</label>
+                    <input type="range" id="contrast" value="100" min="0" max="200" />
+
+                    <label for="opacity">Opacity <span id="current-opacity">100</span>%</label>
+                    <input type="range" id="opacity" value="100" min="0" max="200" />
+
+                    <label for="saturate">Saturate <span id="current-saturate">100</span>%</label>
+                    <input type="range" id="saturate" value="100" min="0" max="200" />
+
                 </div>
                 <div class="output">
                     <h3>Preview</h3>
                     <div class="preview-box">
-                        <p id="sample-text">This text will change based on the settings you choose.</p>
+                        <img src="Tulips in Holland.jpg" id="sample-img" alt="">
                     </div>
                 </div>
             </div>
+
             <div class="code-container">
                 <h3 class="code-title">HTML Code</h3>
                 <pre><code id="html-code"></code></pre>
@@ -75,9 +68,11 @@
                 <pre><code id="css-code"></code></pre>
                 <button class="copy-btn" id="copy-css">Copy</button>
             </div>
+
+
         </main>
     </div>
-    <script src="fonts.js"></script>
+    <script src="image.js"></script>
 </body>
 
 </html>

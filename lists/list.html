@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Customizer</title>
+    <link rel="stylesheet" href="./list.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>CSS Generator</h1>
+        <input type="search" placeholder="Search...">
+        <div class="header-actions">
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><a href="fonts.html"><i class="fas fa-font"></i><span>Fonts</span></a></li>
+                <li><a href="buttons.html"><i class="fas fa-font"></i><span>Buttons</span></a></li>
+
+                <li><a href="#" data-page="box-shadow"><i class="fas fa-square"></i><span>Box Shadow</span></a></li>
+                <li><a href="#" data-page="borders"><i class="fas fa-border-style"></i><span>Borders</span></a></li>
+            </ul>
+        </aside>
+        <!-- ////////////////////////////////////////////////////////////////////////////// -->
+        <main class="content">
+            <h2>Lists Customization</h2>
+            <div class="controls-container">
+                <div class="controls">
+                    <label for="List-style">List Style:</label>
+                    <select id="list-style">
+                        <option value="none">None</option>
+                        <option value="disc" selected>Disc</option>
+                        <option value="circle">Circle</option>
+                        <option value="square">Square</option>
+                        <option value="decimal">Decimal</option>
+                        <option value="decimal-leading-zero">Decimal Leading Zero</option>
+                        <option value="lower-roman">Lower Roman</option>
+                        <option value="upper-roman">Upper Roman</option>
+                        <option value="lower-alpha">Lower Alpha</option>
+                        <option value="upper-alpha">Upper Alpha</option>
+                    </select>
+                    <label for="list-style-position">List Style Position:</label>
+                    <select id="list-style-position">
+                        <option value="outside">Outside</option>
+                        <option value="inside">Inside</option>
+                    </select>
+                </div>
+                <div class="output">
+                    <h3>Preview</h3>
+                    <div class="preview-box">
+                        <ul id="sample-list">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="code-container">
+                <h3 class="code-title">HTML Code</h3>
+                <pre><code id="html-code"></code></pre>
+                <button class="copy-btn" id="copy-html">Copy</button>
+                <h3 class="code-title">CSS Code</h3>
+                <pre><code id="css-code"></code></pre>
+                <button class="copy-btn" id="copy-css">Copy</button>
+            </div>
+        </main>
+    </div>
+    <script>
+    </script>
+    <script src="./list.js"></script>
+</body>
+
+</html>

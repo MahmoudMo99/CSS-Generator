@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Customizer</title>
+    <link rel="stylesheet" href="border.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>CSS Generator</h1>
+        <input type="search" placeholder="Search...">
+        <div class="header-actions">
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <button class="toggle-sidebar"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><a href="fonts.html"><i class="fas fa-font"></i><span>Fonts</span></a></li>
+                <li><a href="buttons.html"><i class="fas fa-font"></i><span>Buttons</span></a></li>
+                <li><a href="#" data-page="box-shadow"><i class="fas fa-square"></i><span>Box Shadow</span></a></li>
+                <li><a href="#" data-page="borders"><i class="fas fa-border-style"></i><span>Borders</span></a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h2>Border Customization</h2>
+            <div class="controls-container">
+                <div class="controls">
+                    <label for="border-style">Border Style:</label>
+                    <select id="border-style">
+                        <option value="none">None</option>
+                        <option value="solid">Solid</option>
+                        <option value="dashed">Dashed</option>
+                        <option value="dotted">Dotted</option>
+                        <option value="double">Double</option>
+                        <option value="groove">Groove</option>
+                        <option value="ridge">Ridge</option>
+                        <option value="inset">Inset</option>
+                        <option value="outset">Outset</option>
+                    </select>
+                    <label for="border-width">Border Width: <span id="border-width-value">1</span>px</label>
+                    <input type="range" id="border-width" min="0" max="20" value="1" />
+
+                    <label for="border-color">Border Color:</label>
+                    <input type="color" id="border-color" value="#000000" />
+
+                    <label for="border-radius">Border Radius: <span id="border-radius-value">0</span>px</label>
+                    <input type="range" id="border-radius" min="0" max="200" value="0" />
+                </div>
+
+                <div class="output">
+                    <h3>Preview</h3>
+                    <div id="preview-box" class="preview-box">
+                        <div id="sample-div-border">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="code-container">
+                <h3 class="code-title">HTML Code</h3>
+                <pre><code id="html-code"></code></pre>
+                <button class="copy-btn" id="copy-html">Copy</button>
+                <h3 class="code-title">CSS Code</h3>
+                <pre><code id="css-code"></code></pre>
+                <button class="copy-btn" id="copy-css">Copy</button>
+            </div>
+        </main>
+    </div>
+    <script src="border.js"></script>
+</body>
+
+</html>
