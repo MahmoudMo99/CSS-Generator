@@ -172,6 +172,14 @@ p {
   margin-bottom: 50px;
 }
 
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
 .card1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
@@ -265,8 +273,6 @@ p {
 .card1:hover h2 {
   color: white;
 }
-
-/* //////// */
 
 .team-container {
   display: flex;
@@ -445,7 +451,6 @@ p {
   transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
 }
 
-/* footer */
 .footer {
   background: linear-gradient(145deg, #0f265b, #2a56c6);
   color: #fff;

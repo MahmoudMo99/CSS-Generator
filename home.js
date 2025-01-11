@@ -1,3 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+  btnsDisplay();
+});
+
+function btnsDisplay() {
+  const authBtn = document.getElementById("auth-btn");
+  const profilePic = document.getElementById("profile-pic");
+
+  const currentUserEmail = localStorage.getItem("loggedInUser");
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const currentUser = users.find((user) => user.email === currentUserEmail);
+
+  if (currentUser) {
+    authBtn.innerHTML = "Logout";
+    profilePic.style.display = "block";
+
+    authBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      logout();
+    });
+  } else {
+    authBtn.innerHTML = "Login";
+    authBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "../login/login.html";
+    });
+    profilePic.style.display = "none";
+  }
+}
+
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "../login/login.html";
+}
+
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const totalSlides = slides.length;
@@ -57,3 +92,16 @@ function resetAutoSlide() {
 
 changeSlide();
 startAutoSlide();
+
+function checkLogin(redirectUrl) {
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const currentUser = users.find(
+    (user) => user.email === localStorage.getItem("loggedInUser")
+  );
+
+  if (!currentUser) {
+    window.location.href = "../login/login.html";
+  } else {
+    window.location.href = redirectUrl;
+  }
+}

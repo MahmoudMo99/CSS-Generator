@@ -7,7 +7,6 @@ function signup() {
   const errorElement = document.getElementById("signupError");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  // const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
   const passwordRegex =
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
 
@@ -34,7 +33,7 @@ function signup() {
 
   if (!passwordRegex.test(password)) {
     errorElement.textContent =
-      "Password must be at least 8 characters long and include at least one letter and one number and one special character.";
+      "Password must be at least 8 characters long and include at least one letter, one number, and one special character.";
     return;
   }
 
@@ -57,6 +56,8 @@ function signup() {
   }
   users.push({ email, password });
   localStorage.setItem("users", JSON.stringify(users));
+
+  localStorage.setItem("loggedInUser", email);
 
   errorElement.textContent = "";
   document.getElementById("signupEmail").value = "";
@@ -93,6 +94,8 @@ function login() {
     errorElement.textContent = "Invalid email or password.";
     return;
   }
+
+  localStorage.setItem("loggedInUser", email);
 
   errorElement.textContent = "";
   document.getElementById("loginEmail").value = "";

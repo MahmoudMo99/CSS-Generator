@@ -10,15 +10,16 @@
 </head>
 
 <body>
-
-
     <header class="main-header">
         <h1><a href="./home.html">CSS</a></h1>
         <input type="search" placeholder="Search...">
         <div class="header-actions">
-            <button class="login-btn"> <a href="./login/login.html">Login</a></button>
+            <img id="profile-pic" src="./user.jpg" alt="Profile Picture" class="profile-pic" class="profile-pic"
+                style=" width: 40px; border-radius: 50%;" />
+            <button class="login-btn" id="auth-btn"><a href="./login/login.html">Login</a></button>
         </div>
     </header>
+
 
     <div class="main-layout">
         <section class="slider">
@@ -68,12 +69,12 @@
                 <h2 id="features" class="page-title">Explore the Features</h2>
                 <div class="cards-container">
 
-                    <div class="card">
-                        <a class="card1" href="./fonts/fonts.html">
+                    <div class="card" onclick="checkLogin('./fonts/fonts.html')">
+                        <a class="card1">
                             <h2>Fonts Customization</h2>
                             <p class="small">Choose from a wide range of font styles, sizes, and effects to create
                                 visually appealing text content.</p>
-                            <div class="go-corner" href="./fonts/fonts.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -81,12 +82,12 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="./texts/texts.html">
+                    <div class="card" onclick="checkLogin('./texts/texts.html')">
+                        <a class="card1">
                             <h2>Texts Customization</h2>
                             <p class="small"> Customize text styles, sizes, and effects to create visually appealing
                                 text content. </p>
-                            <div class="go-corner" href="./texts/texts.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -94,12 +95,12 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="./lists/list.html">
+                    <div class="card" onclick="checkLogin('./lists/list.html')">
+                        <a class="card1">
                             <h2>Lists Customization</h2>
                             <p class="small"> Customize list styles, sizes, and effects to create visually appealing
                                 list content. </p>
-                            <div class="go-corner" href="./lists/list.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -107,12 +108,12 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="./border/border.html">
+                    <div class="card" onclick="checkLogin('./border/border.html')">
+                        <a class="card1">
                             <h2> Border Customization </h2>
                             <p class="small"> Customize border styles, sizes, and effects to create visually appealing
                                 border content. </p>
-                            <div class="go-corner" href="./border/border.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -120,12 +121,12 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="/buttons/buttons.html">
+                    <div class="card" onclick="checkLogin('./buttons/buttons.html')">
+                        <a class="card1">
                             <h2> Button Customization </h2>
                             <p class="small"> Customize button styles, sizes, and effects to create visually appealing
                                 button content. </p>
-                            <div class="go-corner" href="/buttons/buttons.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -133,11 +134,11 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="/boxShadow/box-shadow.html">
+                    <div class="card" onclick="checkLogin('./boxShadow/box-shadow.html')">
+                        <a class="card1">
                             <h2> Box Shadow Customization </h2>
                             <p class="small"> Customize box shadow styles, sizes, and effects to create visually
-                                <div class="go-corner" href="/boxShadow/box-shadow.html">
+                                <div class="go-corner">
                                     <div class="go-arrow">
                                         →
                                     </div>
@@ -145,12 +146,12 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="/images/image.html">
+                    <div class="card" onclick="checkLogin('./images/image.html')">
+                        <a class="card1">
                             <h2> Image Customization </h2>
                             <p class="small"> Customize image styles and effects to create visually appealing image and
                                 make filter effects to create visually appealing image content. </p>
-                            <div class="go-corner" href="/images/image.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -158,13 +159,13 @@
                         </a>
                     </div>
 
-                    <div class="card">
-                        <a class="card1" href="/spacing/spacing.html">
+                    <div class="card" onclick="checkLogin('./spacing/spacing.html')">
+                        <a class="card1">
                             <h2> Spacing Customization </h2>
                             <p class="small"> Customize spacing styles and effects to create visually appealing spacing
                                 ( margin and padding ).
                             </p>
-                            <div class="go-corner" href="/spacing/spacing.html">
+                            <div class="go-corner">
                                 <div class="go-arrow">
                                     →
                                 </div>
@@ -340,7 +341,6 @@
             </div>
         </main>
 
-        <!-- footer -->
 
         <footer class="footer">
             <div class="footer-container">
